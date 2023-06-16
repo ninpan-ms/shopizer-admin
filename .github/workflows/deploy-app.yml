@@ -1,4 +1,4 @@
-name: Setup Node.js
+name: Deploy shopizer-admin app
 
 on: workflow_dispatch
 
@@ -14,12 +14,6 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: 12.8.1
-      
-      - name: Node version
-        run: node --version
-        
-      - name: NPM version
-        run: npm --version
 
       - name: Install dependencies using npm
         run: npm install
