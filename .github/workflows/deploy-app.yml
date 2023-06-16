@@ -40,5 +40,5 @@ jobs:
           service-name: ${{ vars.SPRING_APPS_SERVICE_NAME }}
           app-name: ${{ vars.SPRING_APPS_APP_NAME }}
           use-staging-deployment: false
-          package: ${{ github.workspace }}
-          build-env: "-BP_WEB_SERVER nginx -BP_WEB_SERVER_ROOT build -BP_WEB_SERVER_ENABLE_PUSH_STATE true -BP_NODE_VERSION ~14"
+          package: ${{ github.workspace }}/dist
+          build-env: "-BP_WEB_SERVER nginx -BP_WEB_SERVER_ROOT . -BP_WEB_SERVER_ENABLE_PUSH_STATE true -BP_NODE_VERSION ~14"
